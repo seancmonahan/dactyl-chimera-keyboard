@@ -1,4 +1,8 @@
-# dactyl-chimera-keyboard
+# dactyl-chimera-EX: the Experimental branch.
+
+![image](https://user-images.githubusercontent.com/38160450/137390333-8405c472-2334-4be3-90fa-50e817eeb17e.png)
+
+The rest of this repository is outdated.
 
 ## A mechanical keyboard designed for 3D printing, tinkering, and experimentation.
 
