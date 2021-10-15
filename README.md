@@ -27,3 +27,4 @@ testing requirements:
 
 documentation stuff:
 - have a build guide.
+- have reasonable defaults for column sizes
