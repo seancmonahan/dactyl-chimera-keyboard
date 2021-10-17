@@ -1,4 +1,31 @@
-## Welcome to GitHub Pages
+## Dactyl Chimera build guide
+
+This build guide is a work in progress. It is written for the Dactyl Chimera EX branch. It does not apply to any existing release.
+
+### Designing your keyboard layout
+This section was last updated on 2021-10-17.
+The first thing to do is come up with a "layout", or keymap, for your keyboard. For example, where do you want to put the enter key? Deciding on a layout will you determine if Dactyl Chimera is right for you, and help you choose which parts to print out.
+
+(insert the section from the build guide here.)
+
+### Buying components
+
+
+
+### Hand sizing chart, and using 3D modeling software
+
+
+
+### how to 3d print the pieces
+
+
+
+### soldering and wiring
+
+
+### Software and firmware
+
+
 
 You can use the [editor on GitHub](https://github.com/WolfIcefang/dactyl-chimera-keyboard/edit/build-guide/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
