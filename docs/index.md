@@ -6,11 +6,11 @@ This build guide is a work in progress. It is written for the Dactyl Chimera EX 
 
 Dactyl Chimera (DC) is a 5 row, 6 column keyboard on each half. You can add an extra inner column if you want to, but you'll need to find a new place for the microcontroller.
 
-Building DC requires access to a 3d printer, soldering equipment, and a Windows, Mac, or Linux computer. If you don't own a 3D printer, check your local public library, makerspace, or college.
+Building DC requires access to a 3d printer and soldering equipment as well as a personal Windows, Mac, or Linux computer.
 
-You won't need to know how to write programs or open the command line to enjoy the Dactyl Chimera . However, you will not have OLED displays, per-key RGB backlight, or thumbstick support without modifying some C files and working in the Linux command line.
+You don't "need" to write programs or open the command line to set up or use Dactyl Chimera. However, you cannot use OLED displays, per-key RGB backlight, or thumbstick support without modifying some C files and working in the Linux command line.
 
-Dactyl Chimera is designed for MX-style switches. As of 2021-10-17 there is no Choc switch support.
+Dactyl Chimera is designed for MX-style switches. As of 2021-10-23 there is no Choc switch support.
 
 ### Designing your keyboard layout
 
@@ -21,7 +21,7 @@ Start thinking about your layout now! You'll want your software to be ready when
 For beginners, I'd recommend reading at least one of the following:
 
 - Thomas Baart's Guide to working with a small keyboard. https://blog.splitkb.com/how-to-work-with-small-keyboards
-- Currently there is only one link in this list...
+- Currently there is only one item in this list...
 
 Once you're beyond the basics, you might want to check out:
 
@@ -40,7 +40,15 @@ Dactyl Chimera has almost as many keys as a 60% keyboard, depending on your thum
 
 ### Buying components
 
+We'll need some tools: (3d printer, soldering iron, etc.) Some normal keyboard parts (switches, keycaps) and some special parts (screws, 3d printer filament.)
 
+####Let's start with tools.
+
+Personally, I think it's a good idea to use publically accessible tools so that you can invest more money in the actual components of the keyboard. Check your your local makerspace, public library, or college to see what they have on hand. Who knows, it might even be fancier than what you could afford on your own. If you do insist on owning your own tools, these lists should help you. Make sure to also read the sections below to understand how you'll actually USE these tools.
+
+ - Keebio maintains a great list of soldering equipment. https://docs.keeb.io/soldering-tools#tip-cleanertinner
+ - I'm not sure about 3d printer shopping guides; your suggestions would be helpful here.
+ - If you need safety glasses, I can recommend the Uvex Sperian, Uvex Protégé, and Pyramex Ztek. The clear lens variant is great for working indoors as well as protecting from UV rays while outside.
 
 ### Hand sizing chart, and using 3D modeling software
 
