@@ -6,11 +6,11 @@ This build guide is a work in progress. It is written for the Dactyl Chimera EX 
 
 Dactyl Chimera (DC) is a 5 row, 6 column keyboard on each half. You can add an extra inner column if you want to, but you'll need to find a new place for the microcontroller.
 
-Building DC requires access to a 3d printer and soldering equipment as well as a personal Windows, Mac, or Linux computer.
+Building DC requires access to a 3d printer and soldering equipment. You'll also need access to your own personal Windows, Mac, or Linux computer.
 
-You don't "need" to write programs or open the command line to set up or use Dactyl Chimera. However, you cannot use OLED displays, per-key RGB backlight, or thumbstick support without modifying some C files and working in the Linux command line.
+You don't "need" to write code or open the command line to set up or use Dactyl Chimera. However, you cannot have OLED displays, per-key RGB backlight, or thumbstick support without modifying some C files and working in the Linux command line.
 
-Dactyl Chimera is designed for MX-style switches. As of 2021-10-23 there is no Choc switch support.
+Dactyl Chimera is designed for MX-style switches. It is not compatible with ALPs, Choc, Topre, or any brand of optical keyswitch.
 
 ### Designing your keyboard layout
 
@@ -23,12 +23,20 @@ For beginners, I'd recommend reading at least one of the following:
 - Thomas Baart's Guide to working with a small keyboard. https://blog.splitkb.com/how-to-work-with-small-keyboards
 - Currently there is only one item in this list...
 
-Once you're beyond the basics, you might want to check out:
+The features your keyboard has will be limited (or expanded) depending on the firmware you choose. The following are "officially supported" (which really just means I'll provide some files to help make the setup a bit easier.)
+- The easiest user experience is provided by Vial. You can update your keyboard's layout instantly by dragging and dropping keycap-shaped tiles onto your keyboard layout. Learn about Vial here: https://get.vial.today/
+- If you seek nigh-unlimited customization at the minor cost of a more complex layout updating method, QMK is the firmware for you. https://docs.qmk.fm/
+- The one feature lacking in QMK is bluetooth support. That's where ZMK steps in. https://zmk.dev/ Please remember that Dactyl Chimera has no battery compartment and is NOT A PORTABLE KEYBOARD, so the need for wireless is extremely limited.
+- There is plenty of other firmware out there, but you'll have to do the setup work yourself. The unabridged list can be found here: https://www.reddit.com/r/MechanicalKeyboards/wiki/firmware/
+
+Once you know what your keyboard CAN do, it's time to figure out what you WANT it to do:
 
 - DreymaR's explanation of "[Extend](https://dreymar.colemak.org/layers-extend.html)", for where to put your arrow keys.
 - [Precondition's Guide to Home Row Mods](https://precondition.github.io/home-row-mods) **VS** [why you shuold BAN Key Chords](http://xahlee.info/kbd/banish_key_chords.html) for where to put shift, ctrl, and more.
 - I use Colemak mod-DH and highly recommend it. It helps my fingers rest on the keyboard instead of hovering above it. It's easy to learn using the [Tarmak](https://dreymar.colemak.org/tarmak.html) system!
 - Finally, I challenge someone to combine [Asetniop](http://asetniop.com/) with 50 macro keys. There is no reward.
+
+You can join the https://www.reddit.com/r/KeyboardLayouts/ subreddit if you find you really love messing with layouts.
 
 #### But what do I do with all these keys?
 
@@ -36,21 +44,24 @@ I get it: having anything bigger than a 40% may be intimidating to some of you..
 
 #### But I use a full size keyboard! Where are my arrow keys and function row?
 
-Dactyl Chimera has almost as many keys as a 60% keyboard, depending on your thumb cluster choice. Included with each release is a spreadsheet showcasing the best layouts available. The Traditional-ish layout should appease fans of bigger keyboards.
+Dactyl Chimera has almost as many keys as a 60% keyboard, depending on your thumb cluster choice. The thumb cluster should make layer access marginally more convenient, but that isn't good enough for everyone. Currently, the only keyboards I know of with an F-row and arrow keys are the keyboards that inspired the original Dactyl: the [Maltron](https://www.maltron.com/store/c34/Dual_hand_keyboards.html) and the [Kinesis Advantage 2](https://kinesis-ergo.com/shop/advantage2-refurbished/) Many projects are in the works, check them out if this build guide hasn't been updated in a while:
+- Reddit User [RMTZ](https://www.reddit.com/user/rmTizi/)'s keyboard is still in development.
+- MoErgo's [Glove80](https://geekhack.org/index.php?topic=114881.msg3086876) has not gone into production yet.
+- ScarletSwordfish's beautiful(?) [AEK II Split](https://geekhack.org/index.php?topic=103804) requires parts from an old Apple keyboard and might end up being a personal project.
 
 ### Buying components
 
-We'll need some tools: (3d printer, soldering iron, etc.) Some normal keyboard parts (switches, keycaps) and some special parts (screws, 3d printer filament.)
+We'll need some tools (3d printer, soldering iron, etc.), some normal keyboard parts (switches, keycaps), and some special parts (screws, 3d printer filament.)
 
-####Let's start with tools.
+#### Let's start with tools.
 
-Personally, I think it's a good idea to use publically accessible tools so that you can invest more money in the actual components of the keyboard. Check your your local makerspace, public library, or college to see what they have on hand. Who knows, it might even be fancier than what you could afford on your own. If you do insist on owning your own tools, these lists should help you. Make sure to also read the sections below to understand how you'll actually USE these tools.
+Personally, I think it's a good idea to use publically available tools so that you can invest more money in the actual components of your keyboard. Check your local makerspace, public library, or college to see what they have on hand. Who knows, it might even be fancier than what you could afford on your own. If you do insist on owning your own tools, these lists should help you. Make sure to read the full build guide to understand how you'll actually USE these tools.
 
  - Keebio maintains a great list of soldering equipment. https://docs.keeb.io/soldering-tools#tip-cleanertinner
  - I'm not sure about 3d printer shopping guides; your suggestions would be helpful here.
- - If you need safety glasses, I can recommend the Uvex Sperian, Uvex Protégé, and Pyramex Ztek. The clear lens variant is great for working indoors as well as protecting from UV rays while outside.
+ - If you need safety glasses, I recommend the Uvex Sperian, Uvex Protégé, and Pyramex Ztek. The clear lens variants are great for working indoors while still providing UV protection outdoors.
 
-### Hand sizing chart, and using 3D modeling software
+### Hand sizing chart and using FreeCAD
 
 
 
@@ -71,6 +82,8 @@ RackD is a large piece, but it shouldn't be too much of a challenge. All you rea
 Pring the inner most arch, the one with 4 switch holes, first. Do this because when something inevitably goes wrong, you'll have wasted less plastic. Lay the part flat on its side, with the "legs" that support the arch flat against the printer's build plate. If you are using PrusaSlicer, set the seam position to the under the arch between each socket, and restrict support material from being generated near the clip overhangs of the sockets. Once you get the hang of things you can print multiple arches at once. Remember, you have a total of 10 arches to print; 5 for each side.
 
 After printing each arch, check to make sure the switches and screws fit.
+
+#### Everything else:
 
 Finally, print the microcontroller holder, tenting foot, thumb cluster, and any other accessories you desire. There are various choices for each available, and none should be particularly difficult to make.
 
@@ -97,35 +110,3 @@ This keyboard uses RJ-9 jacks to eliminate the issues of shorting over a TRRS ca
 You can use the [editor on GitHub](https://github.com/WolfIcefang/dactyl-chimera-keyboard/edit/build-guide/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/WolfIcefang/dactyl-chimera-keyboard/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
