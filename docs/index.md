@@ -89,7 +89,7 @@ FreeCAD has an [official manual](https://wiki.freecadweb.org/Manual) but FreeCAD
 
 When you first open Dactyl Chimera in FreeCAD, you should see something like this.
 
-Like a lot of software, the trickiest step is figuring out which button is the most important. In FreeCAD, that's the "Workbench" dropdown list: (it might be in a different location and a different for you)
+Like a lot of software, the trickiest step is figuring out which button is the most important. In FreeCAD, that's the "Workbench" dropdown list: (it might be in a different location and a different color for you)
 
 ![image](https://user-images.githubusercontent.com/38160450/138741323-3e677a1e-5984-4150-b918-8e67fb78d1a6.png)
 
