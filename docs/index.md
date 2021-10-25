@@ -77,35 +77,61 @@ Keycaps are also very important. They play a key role in your keyboard's look an
 
 The keycaps featured on my Dactyl Chimera are Razer's PBT Upgrade Set and MaxKeyboard's south-facing RGB set.
 
+#### Parts unique to Dactyl Chimera
+
+If you've never handwired a keyboard before, you'll obviously need wire, but also a microcontroller (the thing with a USB port on it) and some diodes. 3D printed keyboards are naturally comprised of 3d printer filament and screws, but you might be surprised by the RJ-9 phone cord, used to connect the left and right half together. Finally, this build guide insists you use hotswap sockets for your switches and microcontroller sockets for your microcontroller.
+
+Wires:
+
+Diodes:
+
+Microcontroller: You will need two microcontrollers, one for each half of the keyboard.
+ - The pro micro is a staple of the split keyboard community. It's cheap, small, and popular enough to make troubleshooting easy. However, it is an older chip with limited specs; you might struggle to install the full featureset of QMK+Vial onto this microcontroller.
+ - The Proton-C is a direct upgrade, or sequel if you will, to the Pro Micro. It has better specs, more pins, and USB-C instead of Micro-USB. It is also more expensive and produced in limited quanitities. Read more and find retailers here: https://qmk.fm/proton-c/
+ - The Black Pill is, in some ways, superior to even the Proton-C, however it is less popular and has a different pin layout. This build guide does not apply to the Black Pill simply because I do not own any. If you want to fix this issue, please do.
+ - The Nice!Nano has the same shape and layout as a Pro Micro, but it adds bluetooth and battery charging. You will need this microcontroller for ZMK's wireless features. https://nicekeyboards.com/nice-nano/
+
+3D printer filament: The Prusa Knowledge Base includes a handy catalog of materials, in both [list form](https://help.prusa3d.com/en/category/material-guide_220) and [Chart form](https://help.prusa3d.com/en/materials). The chart even lists material characteristics per-brand! Your local makerspace might have rolls of filament just lying around, but it will probably still cost money to use. I used a combination of PETG arches and a PLA rack for Dactyl Chimera, more for the color combination than the printing performance.
+
+Screws: Did you think you could just pick random screws from Amazon and call it a day? Think again! The screws I use in Dactyl Chimera are horrible! The black coating on the nuts rubs off on my hands and one of the nuts is permanently jammed to the screw so I can no longer take my keyboard apart. I cannot recommend screws to you because I need better recommendations for myself!
+
+RJ-9 phone cord and jacks: Similar to the screws, I got the wrong product for this, and need to do a bit more shopping before I can make recommendations.
+
+Hotswap switch sockets: I got my sockets from KeyHive, https://keyhive.xyz/shop/kailh-sockets however the MechanicalKeyboards parts list wiki should provide a greater range of store links. https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_suppliers
+
+I still need to find an effective socket option for the microcontroller, especially considering the goal of interchangable thumb clusters. Stay tuned.
+
+#### Optional parts
+
+RGBs, OLEDs, Rotary encoders, and joysticks will populate this section... eventually. I still need to find good vendors for myself. Amazon is not a good vendor if you want your OLEDs to arrive in one piece.
+
 ### Hand sizing chart and using FreeCAD
 
-*Dactyl Chimera's .stl files have similar spacing to a regular Dactyl / Dactyl Manuform. If you like the default Dactyl shape but need DC's shorter print times, you can skip this secion.*
+*Dactyl Chimera's .stl files have similar spacing to a traditional Dactyl / Dactyl Manuform. If you like the default Dactyl shape but need DC's shorter print times, you can skip this secion.*
 
-In order to use FreeCAD, you need to download it. Do so here: https://www.freecadweb.org/ The bottom of this page also lists the various helpful communities for when something goes wrong.
+In order to use FreeCAD, you first need to download it. Do so here: https://www.freecadweb.org/ The bottom of FreeCAD's homepage also lists various social for troubleshooting issues.
 
-For people who know what this means: Dactyl Chimera is currently **not compatible** with the [LinkStage3 branch.](https://www.freecadweb.org/), a.k.a. ThunderCAD. Some sketches automatically delete all of their constraints when opened.
+*For people who know what this means: Dactyl Chimera is currently **not compatible** with the [LinkStage3 branch.](https://www.freecadweb.org/), a.k.a. ThunderCAD. Some sketches automatically delete all of their constraints when opened. Use regular FreeCAD. Hopefully the next major revision of either LS3 or DC can fix this.*
 
-FreeCAD has an [official manual](https://wiki.freecadweb.org/Manual) but FreeCAD can do a ton of stuff from Raytracing to architecture, and the manual is still a work in progress. I'll give you the basics here.
-
-When you first open Dactyl Chimera in FreeCAD, you should see something like this.
+FreeCAD has an [official manual](https://wiki.freecadweb.org/Manual) but it covers a ton of non-keyboard stuff from Raytracing to architecture, and the manual is still a work in progress. I'll give you the basics here.
 
 Like a lot of software, the trickiest step is figuring out which button is the most important. In FreeCAD, that's the "Workbench" dropdown list: (it might be in a different location and a different color for you)
 
 ![image](https://user-images.githubusercontent.com/38160450/138741323-3e677a1e-5984-4150-b918-8e67fb78d1a6.png)
 
-If you don't have a workbench dropdown list, use the View dropdown in the menu bar:
+If you don't have a workbench dropdown list, use the View button in the menu bar:
 
 ![image](https://user-images.githubusercontent.com/38160450/138741609-7195e519-66bd-4e6f-86e3-57d5c432d033.png)
 
-FreeCAD is highly customizable; for new users that means it's easy to accidentally hide or rearrange very important buttons. If you get stuck at any point, don't hesitate to ask for help.
+FreeCAD is highly customizable; for new users that means it's easy to accidentally hide or rearrange very important buttons. If you can't figure out a menu at any point, don't hesitate to ask for help.
 
-Each workbench provides a unique set of tools for doing different type of work. For example, the "Part" workbench is like an advanced version of Tinkercad, and the TechDraw workbench is for drawing in 2d without any effect on 3d, like in AutoCAD or Adobe Illustrator. For Dactyl Chimera, the most important workbenches are the "Part Design", "Sketcher", and "Spreadsheet" workbenches.
+Each workbench provides a unique set of tools for doing different type of work. For example, the "Part" workbench is like an advanced version of Tinkercad, and the TechDraw workbench is for drawing in 2d without any effect on 3d, like in AutoCAD or Adobe Illustrator. For Dactyl Chimera, the most important workbenches are "Part Design", "Sketcher", and "Spreadsheet".
 
 But wait! Before we get started, make sure to choose your favorite Mouse Navigation mode, as explained here: https://wiki.freecadweb.org/Mouse_navigation Not doing this is like playing Super Metroid with the default control scheme.
 
 #### Part Design
 
-The Part Design workbench is for navigating 3d space and extruding your 2d sketches. Once again, there are a few "very importanat" buttons hidden among a bunch of other buttons that have very specific use cases. You need to find the Create Body, Create Sketch, and Create Datum Plane buttons, as well as "Pad selected sketch" and Pocket selected sketch" buttons. They look like this:
+The Part Design workbench is for navigating 3d space and extruding your 2d sketches. Once again, there are a few "very importanat" buttons hidden among . You need to find the Create Body, Create Sketch, and Create Datum Plane buttons, as well as "Pad selected sketch" and Pocket selected sketch" buttons. They look like this:
 
 ![image](https://user-images.githubusercontent.com/38160450/138745612-2e0ba2d3-b624-4f3a-b0f5-871e31b9e9cd.png)
 
