@@ -85,7 +85,7 @@ Wires:
 
 Diodes:
 
-Microcontroller: You will need two microcontrollers, one for each half of the keyboard.
+Microcontroller: You will need two microcontrollers, one for each side of the keyboard.
  - The pro micro is a staple of the split keyboard community. It's cheap, small, and popular enough to make troubleshooting easy. However, it is an older chip with limited specs; you might struggle to install the full featureset of QMK+Vial onto this microcontroller.
  - The Proton-C is a direct upgrade, or sequel if you will, to the Pro Micro. It has better specs, more pins, and USB-C instead of Micro-USB. It is also more expensive and produced in limited quanitities. Read more and find retailers here: https://qmk.fm/proton-c/
  - The Black Pill is, in some ways, superior to even the Proton-C, however it is less popular and has a different pin layout. This build guide does not apply to the Black Pill simply because I do not own any. If you want to fix this issue, please do.
@@ -103,7 +103,7 @@ I still need to find an effective socket option for the microcontroller, especia
 
 #### Optional parts
 
-RGBs, OLEDs, Rotary encoders, and joysticks will populate this section... eventually. I still need to find good vendors for myself. Amazon is not a good vendor if you want your OLEDs to arrive in one piece.
+RGBs, OLEDs, Rotary encoders, and joysticks will populate this section... eventually. I still need to find good vendors for myself. All I know so far is... Amazon is not a good vendor if you want your OLEDs to arrive in one piece.
 
 ### Hand sizing chart and using FreeCAD
 
@@ -123,15 +123,17 @@ If you don't have a workbench dropdown list, use the View button in the menu bar
 
 ![image](https://user-images.githubusercontent.com/38160450/138741609-7195e519-66bd-4e6f-86e3-57d5c432d033.png)
 
-FreeCAD is highly customizable; for new users that means it's easy to accidentally hide or rearrange very important buttons. If you can't figure out a menu at any point, don't hesitate to ask for help.
+FreeCAD is highly customizable; that means it's easy to accidentally hide or disable important features. If you get lost at any point, don't hesitate to ask for help.
 
 Each workbench provides a unique set of tools for doing different type of work. For example, the "Part" workbench is like an advanced version of Tinkercad, and the TechDraw workbench is for drawing in 2d without any effect on 3d, like in AutoCAD or Adobe Illustrator. For Dactyl Chimera, the most important workbenches are "Part Design", "Sketcher", and "Spreadsheet".
 
 But wait! Before we get started, make sure to choose your favorite Mouse Navigation mode, as explained here: https://wiki.freecadweb.org/Mouse_navigation Not doing this is like playing Super Metroid with the default control scheme.
 
-#### Part Design
+Oh yeah, also, make sure AutoRecovery is turned on so it creates backup files! There are plenty of buttons in FreeCAD that will just... destroy parts of the model, sometimes it's bad enough that the undo button starts spewing out error messages. AutoRecovery is nestled deep in the [Preferences editor](https://wiki.freecadweb.org/Preferences_Editor/en) there are a ton of other toggles to play with but **don't do that until you're familiar with how FreeCAD works by default**
 
-The Part Design workbench is for navigating 3d space and extruding your 2d sketches. Once again, there are a few "very importanat" buttons hidden among . You need to find the Create Body, Create Sketch, and Create Datum Plane buttons, as well as "Pad selected sketch" and Pocket selected sketch" buttons. They look like this:
+#### Part Design workbench
+
+The Part Design workbench is for navigating 3d space and extruding your 2d sketches. Once again, there are a few "very important" buttons hidden around the UI. You need to find the Create Body, Create Sketch, and Create Datum Plane buttons, as well as "Pad selected sketch" and "Pocket selected sketch" buttons. They look like this:
 
 ![image](https://user-images.githubusercontent.com/38160450/138745612-2e0ba2d3-b624-4f3a-b0f5-871e31b9e9cd.png)
 
@@ -143,12 +145,24 @@ If you cannot find it, you might be in the "Tasks" tab isntead of of the "Model"
 
 Double clicking on something in the Tree View will let you edit that thing, whatever it is. (You can usually press the Escape key to stop editing.) Clicking on an object once in tree view then pressing the spacebar will toggle its visibility. Hovering your mouse over an item Tree View will make its 3d Model "Glow", which helps you see the internals of an object like the Tenting Screw or to help you identify an unnamed item. The item has to be visible for the hover glow trick to work.
 
-If you want to create a new component for your keyboard, like a rotary encoder add-on or a different type of thumb cluster, click the "Create a new Body" button. In FreeCAD, each [Body](https://wiki.freecadweb.org/PartDesign_Body) is a different solid part. When you export the model, each body will become a separate .stl file.
+If you want to create a new component for your keyboard, like a rotary encoder mount or a different type of thumb cluster, click the "Create a new Body" button. In FreeCAD, each [Body](https://wiki.freecadweb.org/PartDesign_Body) is a different solid part. When you export the model, each body becomes a separate .stl file.
 
 The Body's origin might be invisible, so find it in Tree View and toggle its visibility on.
 
-Now that you can see your Origin, you might want to place down some Datum Planes. Datum Planes *can* help you do things align screw holes and provide the bounding edges for where your part begins and ends, but they are optional. Read more about Datum Planes here: https://wiki.freecadweb.org/PartDesign_Plane/en
+Now that you can see your Origin, you might want to place down some Datum Planes. Datum Planes *can* help you do things align screw holes and provide the bounding edges for where your part begins and ends, but they are optional. Read more about arranging Datum Planes here: https://wiki.freecadweb.org/PartDesign_Plane/en
 
+With your datum planes in place, you're ready to start sketching! Click on one of your datum planes or origin planes and then press the Create a New Sketch button. You will be thrown into the Sketcher Workbench.
+
+#### Sketcher workbench
+
+There are now a ton more buttons, and better yet, you'll be using most of them. Don't freak out.
+ - Icons with white lines connecting big red dots are your sketcher geometry. They let you draw things like circles, arcs, and lines.
+ - Icons that are entirely red are your constraints. They keep your geometry lines from moving around. For example, if you want your keyswitch holes to be 14mm wide, then you'll add a length constraint to your geometry lines.
+ - Icons with green in them are... mostly there to help power users work faster, I think. I haven't actually learned what they do.
+
+Now don't go drawing a bunch of lines all over the place! This will tank FreeCAD's performance and not be fun. Instead, draw a few lines (about 4 or 5) and try adding constraints to them until they turn green. A green sketch is "fully constrained" and cannot be dragged around any more. If your lines turn orange, you've added too many constraints.
+
+*OK but what are we actually drawing?* In FreeCAD, you draw the shape you want you 3d model to be, and then extrude it out into a column, like pushing play-doh through a tube. You can also think of your sketch as like, the base plate of your 3d printer, or the floor plan of a house. Even though you only see the floor, you can picture what the building will look like.
 
 
 ### how to 3d print the pieces
