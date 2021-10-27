@@ -125,11 +125,11 @@ If you don't have a workbench dropdown list, use the View button in the menu bar
 
 FreeCAD is highly customizable; that means it's easy to accidentally hide or disable important features. If you get lost at any point, don't hesitate to ask for help.
 
-Each workbench provides a unique set of tools for doing different type of work. For example, the "Part" workbench is like an advanced version of Tinkercad, and the TechDraw workbench is for drawing in 2d without any effect on 3d, like in AutoCAD or Adobe Illustrator. For Dactyl Chimera, the most important workbenches are "Part Design", "Sketcher", and "Spreadsheet".
+Each workbench provides a unique set of tools for doing a different type of work. For example, the "Part" workbench is like an advanced version of Tinkercad, and the Draft workbench is for drawing in 2d, like in AutoCAD or Adobe Illustrator. For Dactyl Chimera, the most important workbenches are "Part Design", "Sketcher", and "Spreadsheet".
 
 But wait! Before we get started, make sure to choose your favorite Mouse Navigation mode, as explained here: https://wiki.freecadweb.org/Mouse_navigation Not doing this is like playing Super Metroid with the default control scheme.
 
-Oh yeah, also, make sure AutoRecovery is turned on so it creates backup files! There are plenty of buttons in FreeCAD that will just... destroy parts of the model, sometimes it's bad enough that the undo button starts spewing out error messages. AutoRecovery is nestled deep in the [Preferences editor](https://wiki.freecadweb.org/Preferences_Editor/en) there are a ton of other toggles to play with but **don't do that until you're familiar with how FreeCAD works by default**
+Oh yeah, also, make sure AutoRecovery is turned on so it creates backup files! There are plenty of buttons in FreeCAD that will just... destroy parts of the model, sometimes it's bad enough that the undo button starts spewing out error messages. AutoRecovery is nestled deep in the [Preferences editor](https://wiki.freecadweb.org/Preferences_Editor/en) there are a ton of other toggles to play with but **don't touch anything until you're familiar with how FreeCAD works by default.**
 
 #### Part Design workbench
 
@@ -149,7 +149,7 @@ If you want to create a new component for your keyboard, like a rotary encoder m
 
 The Body's origin might be invisible, so find it in Tree View and toggle its visibility on.
 
-Now that you can see your Origin, you might want to place down some Datum Planes. Datum Planes *can* help you do things align screw holes and provide the bounding edges for where your part begins and ends, but they are optional. Read more about arranging Datum Planes here: https://wiki.freecadweb.org/PartDesign_Plane/en
+Now that you can see your Origin, you might want to place down some Datum Planes. Datum Planes can help you do things align screw holes and provide the bounding edges for where your part begins and ends, but they are optional. Read more about arranging Datum Planes here: https://wiki.freecadweb.org/PartDesign_Plane/en
 
 With your datum planes in place, you're ready to start sketching! Click on one of your datum planes or origin planes and then press the Create a New Sketch button. You will be thrown into the Sketcher Workbench.
 
@@ -160,9 +160,34 @@ There are now a ton more buttons, and better yet, you'll be using most of them. 
  - Icons that are entirely red are your constraints. They keep your geometry lines from moving around. For example, if you want your keyswitch holes to be 14mm wide, then you'll add a length constraint to your geometry lines.
  - Icons with green in them are... mostly there to help power users work faster, I think. I haven't actually learned what they do.
 
-Now don't go drawing a bunch of lines all over the place! This will tank FreeCAD's performance and not be fun. Instead, draw a few lines (about 4 or 5) and try adding constraints to them until they turn green. A green sketch is "fully constrained" and cannot be dragged around any more. If your lines turn orange, you've added too many constraints.
+Now don't go drawing a bunch of lines all over the place! This will tank FreeCAD's performance and not be fun. (dragging a line around on screen is like asking OpenSCAD to repeatedly regenerate a model, so you can imagine what having a ton of freely floating lines would be like) Instead, draw a few lines (about 4 or 5) and try adding constraints to them until they turn green. A green sketch is "fully constrained" and cannot be dragged around any more. If your lines turn orange, you've added too many constraints.
 
-*OK but what are we actually drawing?* In FreeCAD, you draw the shape you want you 3d model to be, and then extrude it out into a column, like pushing play-doh through a tube. You can also think of your sketch as like, the base plate of your 3d printer, or the floor plan of a house. Even though you only see the floor, you can picture what the building will look like.
+FreeCAD's [Sketcher Workbench documentation](https://wiki.freecadweb.org/Sketcher_Workbench) is very good, honestly.
+
+*OK but what are we actually drawing?* In FreeCAD, you draw the shape you want your 3d model to be, then extrude it out into a column like pushing play-doh through a tube. You can also think of your sketch as the base plate of your 3d printer, or the floor plan of a house. Even though you only see the floor, you can picture what the entire building will look like.
+
+Keep your sketches simple. You can always draw multiple sketches, and keep in mind that everything in a sketch gets extruded (or "padded" in FreeCAD's terminology) the same distance. Not every sketch can be padded; there are a few rules you must follow so that FreeCAD can understand what you drew:
+ - All lines must form a closed loop. FreeCAD's padding tool is kind of like a bucket fill tool. If you have any gaps in your loop, FreeCAD won't be able to tell the difference between the inside and outside of your drawing. Make sure to use the [Coincident contrtaint](https://wiki.freecadweb.org/Sketcher_ConstrainCoincident) to connect the endpoints of your lines together.
+ - Lines may never criss-cross. Think of the lines you draw as the external perimeter of your 3D prints. If parts get too thin, they'd just snap apart instantly. Try to draw all your shapes like [bubble letters.](https://www.lettering-daily.com/bubble-letters/)
+ - That being said, you can put a smaller loop inside a bigger loop. For example, if you but a small circle inside of a bigger circle, you'll get a tube with a hole in it.
+ - You can have as many inner loops as you like, but you are only allowed one outer loop. Each Body in a FreeCAD file must be a single solid object; multiple outer loops would break this rule.
+ - You may feel the need to draw support beams and arches to help hold your loop in place, and in fact you can! However, you'll need a new tool: construction geometry. Think of construction geometry like the scaffolding around a building. It is important when the building is being built, but is taken away for the final product. Read more about construction geometry here: https://wiki.freecadweb.org/Sketcher_ToggleConstruction
+ - You technically don't need to fully define your sketch (turn it green) but I think my college professor described doing so as "a good way to quickly get fired from your job." Needless to say it's generally frowned upon.
+ - One last thing. As long as you aren't ready to pad a sketch into a 3D shape, you can ignore all of the above rules and draw lines wherever you want. Sometimes you need to leave your sketch to look at something else, save your work, do whatever you want.
+
+Once you have sketched the shape you want to pad, it's time to exit the Sketcher. Don't use the Workbenches dropdown list, instead hit the escape key of find the close button in the left panel on-screen. (don't just "close" freecad.) I typically recommend pressing escape on the keyboard.
+
+You should be thrown back into the 3d model view, and you should be transferred back to the PartDesign workbench.
+
+#### Back to the PartDesign workbench
+
+It is time to turn your 2D sketch into a 3D object. Press the yellow Pad button, explained here: https://wiki.freecadweb.org/PartDesign_Pad If you see a solid object, congratulations! You just made it through weeks worth of college-level CAD courses in... hours? Days? I don't know how long it took you to read this. If nothing appears on screen and you get a big error message, then you've drawn your sketch incorrectly. Send a screenshot, or better yet the actual file, to https://matrix.to/#/#dactyl-chimera-center:matrix.org and don't feel bad, when I first started I thought drawing a circle would create a sphere. (it actually creates  cylinder)
+
+Now that you have your basic object, you can create more sketches, using the Pad tool to add more material and the [Pocket tool](https://wiki.freecadweb.org/PartDesign_Pocket) to carve away at material.
+
+#### The spreadsheet workbench: editing the existing model.
+
+
 
 
 ### how to 3d print the pieces
