@@ -4,30 +4,30 @@ This build guide is a work in progress. It is written for the Dactyl Chimera EX 
 
 ### Is Dactyl Chimera right for me?
 
-Dactyl Chimera (DC) is a 5 row, 6 column keyboard on each half. You can add an extra inner column if you want to, but you'll need to find a new place for the microcontroller.
+Dactyl Chimera (DC) is a split keyboard with 5 rows and 6 columns in each half. It has 60 keys, similar to a 60% keyboard.
 
-Building DC requires access to a 3d printer and soldering equipment. You'll also need access to your own personal Windows, Mac, or Linux computer.
+DC is NOT a treatment for hand/arm pain and will not prevent injuries. I simply make keyboards in this style because I don't like spacebar stablilizers.
 
-You don't "need" to write code or open the command line to set up or use Dactyl Chimera. However, you cannot have OLED displays, per-key RGB backlight, or thumbstick support without modifying some C files and working in the Linux command line.
+DC is designed as a "test bench" keyboard. It prioritizes adjustability and experimentation, but sacrifices traditional beauty, sound profile.
 
-Dactyl Chimera is designed for MX-style switches. It is not compatible with ALPs, Choc, Topre, or any brand of optical keyswitch.
+Dactyl Chimera is compaible only with MX-style keyswitches. It is not compatible with Choc, Alps, or any brand of optical switch.
 
 ### Designing your keyboard layout
 
-Start thinking about your layout now! You'll want your software to be ready when the keyboard is done printing.
+Start thinking about your layout today! It will give you something to do while you wait for your 3D printer.
 
-#### Understanding the basic theories of keyboard layout design:
+#### Understanding the basics:
 
-For beginners, I'd read one of the following getting started guides:
+To start, read one of the following guides:
 
 - Thomas Baart's Guide to working with a small keyboard. https://blog.splitkb.com/how-to-work-with-small-keyboards
 - Currently there is only one item in this list...
 
-The features your keyboard has will be limited (or expanded) by the firmware you choose. The following are "officially supported" (which really just means I'll provide some files to help make the setup a bit easier.)
-- The easiest user experience is provided by Vial. You can update your keyboard's layout instantly by dragging and dropping keycap-shaped tiles onto a picture of your keyboard. Learn about Vial here: https://get.vial.today/
-- If you seek nigh-unlimited customization at the cost of a more complex setup, QMK is the firmware for you. https://docs.qmk.fm/
-- The one feature lacking in QMK is bluetooth support. That's where ZMK steps in. https://zmk.dev/ Please remember that Dactyl Chimera has no battery compartment and is NOT A PORTABLE KEYBOARD, so the need for wireless is extremely limited.
-- There is plenty of other firmware out there, but you'll have to do the setup work yourself. The unabridged list can be found here: https://www.reddit.com/r/MechanicalKeyboards/wiki/firmware/
+Your keyboard's layout will be limited (or enhanced) by the firmware you choose.
+- Vial provides a friendly interface where you drag letters onto a picture of your keyboard. https://get.vial.today/
+- QMK offers nigh-unlimited customization and control. You'll need to write code and run Linux to get the most out of it. https://docs.qmk.fm/
+- ZMK is the best choice if you want Bluetooth. https://zmk.dev/
+- There is plenty of other firmware out there. The unabridged list can be found here: https://www.reddit.com/r/MechanicalKeyboards/wiki/firmware/
 
 Once you know what your keyboard CAN do, it's time to figure out what you WANT it to do:
 
@@ -43,7 +43,7 @@ I get it: having anything bigger than a 40% may be intimidating to some of you..
 
 #### But I use a full size keyboard! Where are my arrow keys and function row?
 
-Dactyl Chimera has almost as many keys as a 60% keyboard, depending on your thumb cluster choice. The thumb cluster should make layer access marginally more convenient, but I know that won't be good enough for everyone. Currently, the only keyboards I know of with an F-row and arrow keys are the keyboards that inspired the original Dactyl: the [Maltron](https://www.maltron.com/store/c34/Dual_hand_keyboards.html) and the [Kinesis Advantage 2](https://kinesis-ergo.com/shop/advantage2-refurbished/) Many projects are in the works, though; check these links out:
+Currently, the only keyboards I know of with an F-row and arrow keys are the keyboards that inspired the original Dactyl: the [Maltron](https://www.maltron.com/store/c34/Dual_hand_keyboards.html) and the [Kinesis Advantage 2](https://kinesis-ergo.com/shop/advantage2-refurbished/) Many exciting projects are in the works, check these links out:
 - Reddit User [RMTZ](https://www.reddit.com/user/rmTizi/)'s Naïve keyboard is in development.
 - MoErgo's [Glove80](https://geekhack.org/index.php?topic=114881.msg3086876) has a finalized design but has not gone into production yet.
 - ScarletSwordfish's beautiful(?) [AEK II Split](https://geekhack.org/index.php?topic=103804) requires parts from an old Apple keyboard and might end up being a personal project.
