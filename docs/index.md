@@ -56,7 +56,7 @@ Your layout you make will be limited (or enhanced) by the firmware you choose.
 
 ### Tips for making an efficient layout:
 
-- Use a spreadsheet or Inkscape drawing to brainstorm. Spreadsheets are easy to edit, but Inkscape lets you represent combos and tap dance sequences without sticking to a grid.
+- Use a spreadsheet or Inkscape drawing to brainstorm. Spreadsheets are easy to edit, but Inkscape lets you represent combos and tap dance sequences by drawing lines and arrows.
 - A spreadsheet showcasing good layouts is included in the releases page.
 - Keep a list of every possible keyboard symbol and cross off the ones you've found a spot for.
 - Beware of Enter and Escape! Depending on the app you use, pressing these keys can clear text boxes or instantly send a message. Tab and Alt are also mildly powerful.
