@@ -6,11 +6,13 @@ This build guide is a work in progress. It is written for the Dactyl Chimera EX 
 
 Dactyl Chimera (DC) is a split keyboard with 5 rows and 6 columns in each half. It has 60 keys, similar to a 60% keyboard.
 
-DC is NOT a medical tool. I have not studied ergonomics or anatomy. I design keyboards in this style simply because I dislike stablilizers.
+DC is NOT a medical tool. I have not studied ergonomics or human anatomy. I made this keyboard because I dislike stablilizers.
 
-DC is a "test bench" keyboard. It prioritizes adjustability and experimentation, but sacrifices beauty, sound profile, and portability.
+Dactyl Chimera is a "test bench" keyboard. It prioritizes adjustability and experimentation, but sacrifices beauty, sound profile, and portability.
 
 Dactyl Chimera is compaible only with MX-style keyswitches. It is not compatible with Choc, Alps, or any brand of optical switch.
+
+If all that sounds good to you, then let us begin!
 
 ## Designing your keyboard layout:
 
@@ -27,7 +29,7 @@ Now that you've got the general idea, I highly recommend these articles:
 
 - DreymaR's explanation of "[Extend](https://dreymar.colemak.org/layers-extend.html)", for where to put your arrow keys.
 - [Precondition's Guide to Home Row Mods](https://precondition.github.io/home-row-mods) **VS** [why you shuold BAN Key Chords](http://xahlee.info/kbd/banish_key_chords.html) for where to put shift, ctrl, and more.
-- I use Colemak mod-DH and highly recommend it. It helps my fingers rest on the keyboard instead of hovering above it. It's easy to learn using the [Tarmak](https://dreymar.colemak.org/tarmak.html) system!
+- I use Colemak mod-DH and highly recommend it. It helped my thumbs rest on the significantly smaller spacebar key. It's easy to learn using the [Tarmak](https://dreymar.colemak.org/tarmak.html) system!
 - You can join the https://www.reddit.com/r/KeyboardLayouts/ subreddit for some really mind-bending ideas.
 - Finally, I challenge someone to combine [Asetniop](http://asetniop.com/) with 50 macro keys. There is no reward.
 
@@ -37,7 +39,7 @@ Now that you've got the general idea, I highly recommend these articles:
 
 ### If you are more accustomed to larger keyboards...
 
-...Then you might be intimidated by the lack of arrow keys or a function row. Small keyboards are not for everyone. You can use software to see what layer typing feels like without building a special keyboard. I like *EPKL* for Windows machines and *Kmonad* for Linux users. 
+...Then you might be intimidated by the lack of arrow keys or a function row. Small keyboards are not for everyone. You can try using layers on the keyboard you already own via the software in this list: https://www.reddit.com/r/MechanicalKeyboards/wiki/remapping_software
 Currently, the only keyboards I know of with an F-row and arrow keys are the [Maltron](https://www.maltron.com/store/c34/Dual_hand_keyboards.html) and the [Kinesis Advantage 2](https://kinesis-ergo.com/shop/advantage2-refurbished/) Many exciting projects are in the works, check these links out:
 - Redditor [RMTZ](https://www.reddit.com/user/rmTizi/)'s Naïve keyboard is in development.
 - MoErgo's [Glove80](https://geekhack.org/index.php?topic=114881.msg3086876) has a finalized design but has not gone into production yet.
@@ -50,6 +52,10 @@ Your keyboard's layout will be limited (or enhanced) by the firmware you choose.
 - QMK offers nigh-unlimited customization and control. You'll need to write code and run Linux to get the most out of it. https://docs.qmk.fm/
 - ZMK is the best choice if you want Bluetooth. https://zmk.dev/
 - There is plenty of other firmware out there. The unabridged list can be found here: https://www.reddit.com/r/MechanicalKeyboards/wiki/firmware/
+
+### Tips for making an efficient layout:
+
+- Use a spreadsheet or Inkscape to brainstorm. Spreadsheets are quickest to edit, but Inkscape makes it easier to 
 
 ## Buying components
 
