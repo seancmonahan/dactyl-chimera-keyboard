@@ -29,25 +29,26 @@ Now that you've got the general idea, I highly recommend these articles:
 
 - DreymaR's explanation of "[Extend](https://dreymar.colemak.org/layers-extend.html)", for where to put your arrow keys.
 - [Precondition's Guide to Home Row Mods](https://precondition.github.io/home-row-mods) **VS** [why you shuold BAN Key Chords](http://xahlee.info/kbd/banish_key_chords.html) for where to put shift, ctrl, and more.
-- I use Colemak mod-DH and highly recommend it. It helped my thumbs rest on the significantly smaller spacebar key. It's easy to learn using the [Tarmak](https://dreymar.colemak.org/tarmak.html) system!
+- I use Colemak mod-DH and highly recommend it. It helped my thumbs rest on the small spacebar key. It's easy to learn using the [Tarmak](https://dreymar.colemak.org/tarmak.html) system.
 - You can join the https://www.reddit.com/r/KeyboardLayouts/ subreddit for some really mind-bending ideas.
 - Finally, I challenge someone to combine [Asetniop](http://asetniop.com/) with 50 macro keys. There is no reward.
 
-### If you typically prefer smaller keyboards...
+#### If you typically prefer smaller keyboards...
 
-...Then you might be worried about having 60 keys. Here's the secret to getting around that: you don't actually need to USE all the keys on this keyboard! You don't even need to put switches in all the holes. The Dactyl Chimera is massive so that it can accommodate all types of layouts, big and small. That being said, having "extra keys" can quickly accommodate a strange keyboard shortcut, (for example, "why does Microsoft Excel force me to use F2 as the Edit Cell shortcut?"), to temporarily patch a deficit in your layout, ("I didn't realize I needed an Enter key on my left hand."), or for actions you often take when your hands aren't settled into a typing rhythm. ("I need to mute my computer for this phone call!")
+...Then you might be worried about having 60 keys. Here's the secret to getting around that: you don't actually need to USE every key on this keyboard! You don't even need to put switches in all the holes. The Dactyl Chimera is massive so that it can accommodate all types of layouts, big and small. That being said, "extra keys" can quickly accommodate an unexpected keyboard shortcut, (for example, "why does Microsoft Excel force me to use F2 as the Edit Cell shortcut?"), temporarily patch a deficit in your layout, ("I didn't realize I needed an Enter key on my left hand."), or trigger actions you take when your hands aren't settled into a typing rhythm. ("I need to mute my computer for this phone call.")
 
-### If you are more accustomed to larger keyboards...
+#### If you are more accustomed to larger keyboards...
 
-...Then you might be intimidated by the lack of arrow keys or a function row. Small keyboards are not for everyone. You can try using layers on the keyboard you already own via the software in this list: https://www.reddit.com/r/MechanicalKeyboards/wiki/remapping_software
-Currently, the only keyboards I know of with an F-row and arrow keys are the [Maltron](https://www.maltron.com/store/c34/Dual_hand_keyboards.html) and the [Kinesis Advantage 2](https://kinesis-ergo.com/shop/advantage2-refurbished/) Many exciting projects are in the works, check these links out:
+...Then you might be intimidated by the lack of arrow keys or a function row. Small keyboards are not for everyone. You can experiment with layers for the keyboard you already own. This list will help: https://www.reddit.com/r/MechanicalKeyboards/wiki/remapping_software
+
+Currently, the only keyboards I know of with an F-row and arrow keys are the [Maltron](https://www.maltron.com/store/c34/Dual_hand_keyboards.html) and the [Kinesis Advantage 2](https://kinesis-ergo.com/shop/advantage2-refurbished/) Many exciting projects are in the works, check these out:
 - Redditor [RMTZ](https://www.reddit.com/user/rmTizi/)'s Naïve keyboard is in development.
 - MoErgo's [Glove80](https://geekhack.org/index.php?topic=114881.msg3086876) has a finalized design but has not gone into production yet.
 - ScarletSwordfish's [AEK II Split](https://geekhack.org/index.php?topic=103804) is beautiful, but it requires gutting a vintage keyboard and may never see a public release.
 
 ### Choosing your firmware:
 
-Your keyboard's layout will be limited (or enhanced) by the firmware you choose.
+Your layout you make will be limited (or enhanced) by the firmware you choose.
 - Vial provides a friendly interface where you drag letters onto a picture of your keyboard. https://get.vial.today/
 - QMK offers nigh-unlimited customization and control. You'll need to write code and run Linux to get the most out of it. https://docs.qmk.fm/
 - ZMK is the best choice if you want Bluetooth. https://zmk.dev/
@@ -55,7 +56,14 @@ Your keyboard's layout will be limited (or enhanced) by the firmware you choose.
 
 ### Tips for making an efficient layout:
 
-- Use a spreadsheet or Inkscape to brainstorm. Spreadsheets are quickest to edit, but Inkscape makes it easier to 
+- Use a spreadsheet or Inkscape drawing to brainstorm. Spreadsheets are easy to edit, but Inkscape lets you represent combos and tap dance sequences without sticking to a grid.
+- A spreadsheet showcasing good layouts is included in the releases page.
+- Keep a list of every possible keyboard symbol and cross off the ones you've found a spot for.
+- Beware of Enter and Escape! Depending on the app you use, pressing these keys can clear text boxes or instantly send a message. Tab and Alt are also mildly powerful.
+- Never bridge your combos or tap dance across both halves of the keyboard. There will come a time when you must hold something in one hand and type in the other. (even if it's just your mouse.) My original Corne layout used a combo of left thumb and right thumb as "enter"; it was almost impossible to use.
+- Pay attention to "bigrams" and "trigrams", keys you often press in a particular sequence. For example, every sentence you write ends with a tap dance of [period] -> [space] -> [shift]. If you put shift and spacebar under the same thumb, you'll suddenly feel inclined to write run-on sentences.
+- Finally, never be afraid to update your layout. Finding a good keymap is a mixture of logical patterns, listening to your muscle memory, and accomodating the keyboard shortcuts your software uses.
+
 
 ## Buying components
 
