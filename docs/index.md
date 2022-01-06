@@ -23,25 +23,37 @@ Start thinking about your layout today! It will give you something to do while y
 To start, read one of the following guides:
 
 - Thomas Baart's guide to working with a small keyboard. https://blog.splitkb.com/how-to-work-with-small-keyboards
-- Currently there is only one item in this list...
+- Currently there is only one guide in this list...
 
 Now that you've got the general idea, I highly recommend these articles:
 
 - DreymaR's explanation of "[Extend](https://dreymar.colemak.org/layers-extend.html)", for where to put your arrow keys.
 - [Precondition's Guide to Home Row Mods](https://precondition.github.io/home-row-mods) **VS** [why you shuold BAN Key Chords](http://xahlee.info/kbd/banish_key_chords.html) for where to put shift, ctrl, and more.
-- I use Colemak mod-DH and highly recommend it. It helped my thumbs rest on the small spacebar key. It's easy to learn using the [Tarmak](https://dreymar.colemak.org/tarmak.html) system.
+- I use Colemak mod-DH. It helps my thumbs rest on the small spacebar key. It's easy to learn using the [Tarmak](https://dreymar.colemak.org/tarmak.html) system.
 - You can join the https://www.reddit.com/r/KeyboardLayouts/ subreddit for some really mind-bending ideas.
 - Finally, I challenge someone to combine [Asetniop](http://asetniop.com/) with 50 macro keys. There is no reward.
 
-#### If you typically prefer smaller keyboards...
+#### If you prefer smaller keyboards...
 
-...Then you might be worried about having 60 keys. Here's the secret to getting around that: you don't actually need to USE every key on this keyboard! You don't even need to put switches in all the holes. The Dactyl Chimera is massive so that it can accommodate all types of layouts, big and small. That being said, "extra keys" can quickly accommodate an unexpected keyboard shortcut, (for example, "why does Microsoft Excel force me to use F2 as the Edit Cell shortcut?"), temporarily patch a deficit in your layout, ("I didn't realize I needed an Enter key on my left hand."), or trigger actions you take when your hands aren't settled into a typing rhythm. ("I need to mute my computer for this phone call.")
+...Then you might be intimidated by a staggering **60 keys**. Fortunately, you don't actually need to USE every key on this keyboard. You don't even need to put switches in all the holes! The Dactyl Chimera is massive so that it can accommodate all layouts, big and small. That being said, "extra keys" can quickly accommodate an unexpected keyboard shortcut, (for example, "why does Microsoft Excel use F2 as the Edit Cell shortcut?"), temporarily patch a deficit in your layout, ("I didn't realize I needed an Enter key on my left hand."), or trigger actions you use when your hands aren't settled into a typing rhythm. ("I need to mute my computer for this phone call.")
 
-#### If you are more accustomed to larger keyboards...
+If you're still wish for a smaller keyboard, you can check out:
+- The squeezebox keyboard, possibly the closest to the Dactyl Chimera in design and features. https://www.reddit.com/r/ErgoMechKeyboards/comments/rvuvk2/squeezebox_keyboard_v2112/
+- The Corne is open source and a tentpole of the split ergo community. https://github.com/foostan/crkbd
+- The Lily58 has 58 keys but is flat and travel-friendly. Many online retailers offer versions with unique features. https://github.com/kata0510/Lily58
+- The Azeron Cyborg is a one-handed keypad designed for gaming. https://store.azeron.eu/index.php?route=extension/azeron_store_design_product/getAllKeypads#keypad=cyborg
 
-...Then you might be intimidated by the lack of arrow keys or a function row. Small keyboards are not for everyone. You can experiment with layers for the keyboard you already own. This list will help: https://www.reddit.com/r/MechanicalKeyboards/wiki/remapping_software
 
-Currently, the only keyboards I know of with an F-row and arrow keys are the [Maltron](https://www.maltron.com/store/c34/Dual_hand_keyboards.html) and the [Kinesis Advantage 2](https://kinesis-ergo.com/shop/advantage2-refurbished/) Many exciting projects are in the works, check these out:
+#### If you are accustomed to larger keyboards...
+
+...Then you might be concerned by the lack of arrow keys or a function row. Small keyboards are not for everyone. You can use key remapping software to "shrink" the keyboard you currently own, add layers, and more: https://www.reddit.com/r/MechanicalKeyboards/wiki/remapping_software
+
+Few keyboards sold today offer a split "bowl" design with an F-row and arrow keys. 
+- [Maltron](https://www.maltron.com) is the brand that started it all.
+- The [Kinesis Advantage 2](https://kinesis-ergo.com/shop/advantage2-refurbished/) borrowed some ideas from Maltron, and the first Dactyl borrowed some ideas from Kinesis.
+
+Many exciting projects are in the works, though:
+
 - Redditor [RMTZ](https://www.reddit.com/user/rmTizi/)'s Naïve keyboard is in development.
 - MoErgo's [Glove80](https://geekhack.org/index.php?topic=114881.msg3086876) has a finalized design but has not gone into production yet.
 - ScarletSwordfish's [AEK II Split](https://geekhack.org/index.php?topic=103804) is beautiful, but it requires gutting a vintage keyboard and may never see a public release.
@@ -57,25 +69,28 @@ Your layout you make will be limited (or enhanced) by the firmware you choose.
 ### Tips for making an efficient layout:
 
 - Use a spreadsheet or Inkscape drawing to brainstorm. Spreadsheets are easy to edit, but Inkscape lets you represent combos and tap dance sequences by drawing lines and arrows.
-- A spreadsheet showcasing good layouts is included in the releases page.
-- Keep a list of every possible keyboard symbol and cross off the ones you've found a spot for.
+- Keep a list of every possible keyboard symbol. Cross off symbols you've found a spot for.
 - Beware of Enter and Escape! Depending on the app you use, pressing these keys can clear text boxes or instantly send a message. Tab and Alt are also mildly powerful.
 - Never bridge your combos or tap dance across both halves of the keyboard. There will come a time when you must hold something in one hand and type in the other. (even if it's just your mouse.) My original Corne layout used a combo of left thumb and right thumb as "enter"; it was almost impossible to use.
 - Pay attention to "bigrams" and "trigrams", keys you often press in a particular sequence. For example, every sentence you write ends with a tap dance of [period] -> [space] -> [shift]. If you put shift and spacebar under the same thumb, you'll suddenly feel inclined to write run-on sentences.
-- Finally, never be afraid to update your layout. Finding a good keymap is a mixture of logical patterns, listening to your muscle memory, and accomodating the keyboard shortcuts your software uses.
+- You can find a spreadsheet of the Dactyl Chimera's best layouts in this GitHub's releases page.
+- Finally, never be afraid to change your layout. Finding a good keymap is a mixture of logic, listening to pre-existing muscle memory, and accepting your company software's terrible keyboard shortcuts.
 
 
 ## Buying components
 
-We'll need some tools (3d printer, soldering iron, etc.), some normal keyboard parts (switches, keycaps), and some special parts (screws, 3d printer filament.)
+We'll need some tools (3d printer, soldering iron), some normal keyboard parts (switches, keycaps), and some special parts (screws, 3d printer filament.)
 
 ### Let's start with tools.
 
-Personally, I think it's a good idea to use publically available tools so that you can invest more money in the actual components of your keyboard. Check your local makerspace, public library, or college to see what they have on hand. Who knows, it might even be fancier than what you could afford on your own. If you do insist on owning your own tools, these lists should help you. Make sure to read the full build guide to understand how you'll actually USE these tools.
+Take advantage of publically available tools; this will let you invest (or sink) more money into the actual components of your keyboard. Your local makerspace, public library, or college campus are great places to look.
 
- - Keebio maintains a great list of soldering equipment. https://docs.keeb.io/soldering-tools#tip-cleanertinner
- - I'm not sure about 3d printer shopping guides; your suggestions would be helpful here.
- - If you need safety glasses, I recommend the Uvex Sperian, Uvex Protégé, and Pyramex Ztek. The clear lens variants are great for working indoors while still providing UV protection outdoors.
+Make sure you have access to the following.
+ - A soldering iron, solder, flush cutters, and a method of desoldering. You will not need a heat gun. https://docs.keeb.io/soldering-tools
+ - You'll need a 3D printer. The users of https://www.reddit.com/r/3Dprinting/ can help. The Dactyl Chimera doesn't need dual extrusion, resin-level quality, or an enclosed build area, but those features are the gatekeepers to many other projects. From my perspective, a large heated bed, good cooling fans, and automatic bed leveling are always worth having.
+ - You can accent this keyboard with an acrylic bottom plate. I believe Keyhive offers an acrylic cutting service if you contact them directly. https://keyhive.xyz/
+ - Is your screwdriver camming out? It's probably not the screw's fault. [Project Farm has multiple videos on the topic.](https://www.youtube.com/c/ProjectFarm/search?query=screwdriver)
+ - If you need safety glasses, I recommend the Uvex Sperian, Uvex Protégé, and Pyramex Ztek. Clear lens variants are great for working indoors and still provide UV protection outdoors.
 
 ### Normal keyboard parts (the keys).
 
@@ -83,24 +98,22 @@ First, the keyswitches. There are nigh-unlimited options here, look no further t
 
 I recommend silent switches on the Dactyl Chimera. With large echo chambers and no walls, it can be difficult to reduce unwanted sound. Silent switches have tiny rubber bumpers inside the switch itself! Many popular switches have a silent variant.
 
-Stores that sell switches at a reasonable price include:
- - NovelKeys https://novelkeys.com/collections/switches
- - KBDFans https://kbdfans.com/collections/switches
- - The r/mechanicalkeyboards wiki has an extensive list of vendors https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_suppliers
+The r/mechanicalkeyboards wiki has an extensive list of vendors https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_suppliers
 
-Keycaps are also very important. They dominate how your keyboard looks and feels.
+Keycaps are just as important as switches.
  - Use the MechanicalKeyboards [Keycap Guides](https://www.reddit.com/r/MechanicalKeyboards/wiki/keycap_guides) to learn all about keycap shapes and materials
- - Then head over to [KeyCapSellers](https://www.reddit.com/r/MechanicalKeyboards/wiki/keycapsellers) for pricing and vendors.
+ - Then head over to [KeyCapSellers](https://www.reddit.com/r/MechanicalKeyboards/wiki/keycapsellers) for pricing and vendor options.
 
-The keycaps featured on my Dactyl Chimera are Razer's PBT Upgrade Set and MaxKeyboard's south-facing RGB set.
+### Parts unique to the Dactyl Chimera
 
-### Parts unique to Dactyl Chimera
+WSB: World's smallest board
 
-If you've never handwired a keyboard before, you'll obviously need wire, but also a microcontroller (the thing with a USB port on it) and some diodes. 3D printed keyboards are naturally comprised of 3d printer filament and screws, but you might be surprised by the RJ-9 phone cord, used to connect the left and right half together. Finally, this build guide insists you use hotswap sockets for your switches and microcontroller sockets for your microcontroller.
 
 Wires:
 
-Diodes:
+
+Diodes: 
+
 
 Microcontrollers: You will need one microcontroller for each side of the keyboard. (two in total.)
  - The pro micro is a staple of the split keyboard community. It's cheap, small, and popular enough to make troubleshooting easy. However, it is an older chip with limited specs; you might struggle to install Vial onto this microcontroller.
@@ -108,27 +121,29 @@ Microcontrollers: You will need one microcontroller for each side of the keyboar
  - The Black Pill is, in some ways, superior to even the Proton-C, however it is less popular and has a different pin layout. I do not own a Black Pill, so this guide does not cover it.
  - The Nice!Nano has the same shape and layout as a Pro Micro, but it adds bluetooth and battery charging. This microcontroller utilizes ZMK's wireless features. https://nicekeyboards.com/nice-nano/
 
-3D printer filament: The Prusa Knowledge Base includes a handy catalog of materials, in both [list form](https://help.prusa3d.com/en/category/material-guide_220) and [Chart form](https://help.prusa3d.com/en/materials). Your local makerspace might already have rolls of filament for you to use. I used a combination of PETG arches and a PLA rack for Dactyl Chimera, more for the color combination than the printing performance.
-
-Screws: Did you think you could just pick random screws from Amazon and call it a day? Think again! The screws I use in Dactyl Chimera are horrible! The black coating on the nuts rubs off on my hands and one of the nuts is permanently jammed to the screw so I can no longer take my keyboard apart. I cannot recommend screws to you because I need better recommendations for myself!
-
-RJ-9 phone cord and jacks: Similar to the screws, I got the wrong product for this, and need to do a bit more shopping before I can make recommendations.
+Microcontroller sockets:
 
 Hotswap switch sockets: I got my sockets from [KeyHive](https://keyhive.xyz/shop/kailh-sockets). Other vendors are listed here: https://www.reddit.com/r/MechanicalKeyboards/wiki/switch_suppliers
 
-I still need to find an effective socket option for the microcontroller, especially considering the goal of interchangable thumb clusters. Stay tuned.
+Prototyping PCB:
+
+
+RJ-9 phone cord and jacks: I need to find something good before I can make a recommendation.
+
+3D printer filament: The Prusa Knowledge Base includes a handy catalog of materials, in both [list form](https://help.prusa3d.com/en/category/material-guide_220) and [Chart form](https://help.prusa3d.com/en/materials). Your local makerspace might already have rolls of filament for you to use. I used a combination of PETG arches and a PLA rack for Dactyl Chimera, more for the color combination than the printing performance.
+
+Screws: Did you think you could just pick random screws from Amazon and call it a day? Think again! The screws I used in my Dactyl Chimera are horrible! The black coating rubs off on my hands and one of the screws got jammed into place. I cannot recommend screws to you because I need better recommendations for myself!
+
 
 ### Optional parts
 
-RGBs, OLEDs, Rotary encoders, and joysticks will populate this section... eventually. I still need to find good vendors for myself. All I know so far is... Amazon is not a good vendor if you want your OLEDs to arrive in one piece.
+RGBs, OLEDs, Rotary encoders, and joysticks will populate this section... eventually.  All I know so far is... Amazon is not a good vendor if you want your OLEDs to arrive in one piece.
 
 ## Hand sizing chart
 
-*Dactyl Chimera's .stl files have similar spacing to a traditional Dactyl / Dactyl Manuform. If you like the default Dactyl shape but need DC's shorter print times, you can skip this secion.*
+*Dactyl Chimera's .stl files have similar spacing to a regular Dactyl Manuform. If you like the default Dactyl shape but need DC's shorter print times, you can skip this secion.*
 
 In order to use FreeCAD, you first need to download it. Do so here: https://www.freecadweb.org/ The bottom of FreeCAD's homepage also lists various social for troubleshooting issues.
-
-*For people who know what this means: Dactyl Chimera is currently **not compatible** with the [LinkStage3 branch.](https://www.freecadweb.org/), a.k.a. ThunderCAD. Some sketches automatically delete all of their constraints when opened. Use regular FreeCAD. Hopefully the next major revision of either LS3 or DC can fix this.*
 
 FreeCAD has an [official manual](https://wiki.freecadweb.org/Manual) but it covers a ton of non-keyboard stuff from Raytracing to architecture, and the manual is still a work in progress. I'll give you the basics here.
 
